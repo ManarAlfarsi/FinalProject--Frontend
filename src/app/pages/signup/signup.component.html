@@ -1,0 +1,31 @@
+<div class="flex flex-col h-screen w-screen justify-center items-center">
+  <div class="flex flex-col w-1/2  shadow-md px-20 py-10 rounded-md bg-gray-200">
+    <div class="flex flex-col">
+      <h1 class="text-4xl font-bold">Login</h1>
+      <h3>Candles-Store</h3>
+    </div>
+    <div class="flex flex-col gap-4">
+      <form [formGroup]="loginForm" (submit)="onSubmit()">
+        <div class="flex flex-col gap-2">
+          <app-input label="Name" inputClass="border-candle-yellow" type="email" [control]="loginForm.controls.name" />
+        </div>
+        <div class="flex flex-col gap-2">
+          <app-input label="Email" name="email" inputClass="border-candle-yellow" type="email"
+            [control]="loginForm.controls.email" />
+        </div>
+        <div class="flex flex-col gap-2">
+          <app-input label="Password" name="password" inputClass="border-candle-yellow" type="password"
+            [control]="loginForm.controls.password" />
+        </div>
+        <div class="flex flex-col gap-2">
+          <app-input label="Password Confirmation" name="passwordConfirmation" inputClass="border-candle-yellow"
+            type="password" [control]="loginForm.controls.password" />
+        </div>
+        <div class="mt-5">
+          <app-button label="Signup" customClasses="w-full" />
+          <!-- <button type="button" (click)="updateData()" class="bg-red-500">Update Profile</button> -->
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

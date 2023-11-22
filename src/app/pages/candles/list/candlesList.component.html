@@ -1,0 +1,47 @@
+@if (showDialog){
+<app-dialog title={{dialogTitle}} (close)="closeDialog()" />
+}
+
+<div class="py-10">
+  <div class="flex justify-between">
+    <h1 class="text-4xl font-bold mb-5">Candles</h1>
+    <div class="mr-12 flex gap-2">
+      <input type="text" class="w-full px-4  h-10 rounded-md border border-gray-400 focus:outline-candle-yellow"
+        placeholder="search" />
+      <app-button label="search" customClasses="" />
+      <app-button label="new" customClasses="bg-candle-yellow" (clicked)="newCandle()" />
+    </div>
+  </div>
+
+  <div class="container mx-auto">
+    <div class="overflow-x-auto  rounded-md">
+      <table class="min-w-full bg-white border border-gray-300 shadow-md overflow-hidden overflow-y-auto">
+        <thead>
+          <tr>
+            <th class="py-3 px-6 text-left bg-gray-100 border-b">ID</th>
+            <th class="py-3 px-6 text-left bg-gray-100 border-b">Name</th>
+            <th class="py-3 px-6 text-left bg-gray-100 border-b">Price</th>
+            <th class="py-3 px-6 text-left bg-gray-100 border-b">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Example data rows -->
+          @for ( candle of candles; track candle.id){
+          <tr>
+            <td class="py-4 px-6 border-b">{{candle.id}}</td>
+            <td class="py-4 px-6 border-b">{{candle.name}}</td>
+            <td class="py-4 px-6 border-b ">{{candle.price}}</td>
+            <td class="py-4 px-6 border-b flex gap-5">
+              <app-button label="Delete" customClasses="bg-red-500 hover:bg-red-600 focus:border-red-300"
+                (clicked)="deleteCandle(candle.id)" />
+              <!-- <app-button label="Edit" customClasses=" bg-gray-500 hover:bg-gray-600 focus:border-gray-300 " /> -->
+              <app-button label="Edit" (clicked)="update(candle.id)"
+                customClasses=" bg-green-500 hover:bg-green-600 focus:border-green-300 " />
+            </td>
+          </tr>}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

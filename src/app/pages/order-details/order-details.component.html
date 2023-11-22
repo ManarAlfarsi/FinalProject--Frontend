@@ -1,0 +1,24 @@
+<div class="py-10">
+  <div class="flex justify-between">
+    <h1 class="text-4xl   font-bold mb-5">Candles</h1>
+    <div class=" flex gap-10">
+      <h1 class="text-3xl font-bold">{{oreder?.customer?.email}}</h1>
+      <h1 class="text-3xl font-bold "><span>Price: </span>{{oreder.totalPrice}}</h1>
+    </div>
+  </div>
+  <div class="flex flex-col w-screen">
+    <!-- <app-search /> -->
+    <div class="grid grid-cols-1 md:grid-cols-3">
+
+
+      @for (candle of oreder.candles; track candle.id){
+      <app-card title={{candle.price}} name={{candle.name}} buttonTitle="" description={{candle.description}} />
+      }
+      @empty {
+      <div class="flex my-auto justify-center items-center h-[80vh] w-[100vw] pb-10  ">
+        <h1 class="text-4xl font-bold">There is no candles</h1>
+      </div>
+      }
+    </div>
+  </div>
+</div>

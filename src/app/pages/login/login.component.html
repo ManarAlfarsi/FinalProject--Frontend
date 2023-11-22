@@ -1,0 +1,29 @@
+@if (showDialog)
+{
+<app-dialog (close)="closeDialog()" title="error" description="wrong email or password" />
+}
+<div class="grid grid-cols-1 h-full w-full items-center">
+  <div class="flex flex-col w-1/2 mx-auto  my-auto shadow-md p-20 rounded-md  mt-16 bg-gray-200">
+    <div class="flex flex-col">
+      <h1 class="text-4xl font-bold">Login</h1>
+      <h3>Candles-Store</h3>
+    </div>
+    <div class="flex flex-col gap-4">
+      <form [formGroup]="loginForm" (submit)="onSubmit()">
+        <div class="flex flex-col gap-2">
+          <app-input label="Email" name="email" inputClass="border-candle-yellow" type="email"
+            [control]="loginForm.controls.email" />
+        </div>
+        <div class="flex flex-col gap-2">
+          <app-input label="Password" name="password" inputClass="border-candle-yellow" type="password"
+            [control]="loginForm.controls.password" />
+        </div>
+        <div class="mt-5">
+          <app-button label="login" customClasses="w-full" />
+          <!-- <button type="button" (click)="updateData()" class="bg-red-500">Update Profile</button> -->
+        </div>
+      </form>
+      <span>You don't have an account <a routerLink="/auth/signup" class="text-blue-500 underline">Sign-Up</a></span>
+    </div>
+  </div>
+</div>

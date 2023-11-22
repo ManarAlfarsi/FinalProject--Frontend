@@ -1,0 +1,19 @@
+<div class="container mx-auto flex items-center justify-between p-4">
+
+  <!-- Brand/Logo -->
+  <a routerLink="/" class="text-xl font-semibold text-gray-800">CandleStore</a>
+
+  <!-- Navigation Links -->
+  <nav class="space-x-4 hidden md:flex ">
+
+    <a routerLink="/site/candles" routerLinkActive="active-btn" ariaCurrentWhenActive="page" class="btn-nav">Candles</a>
+    <a *ngIf="authService.currentUserSignal()===null" routerLink="/auth/login" routerLinkActive="active-btn"
+      ariaCurrentWhenActive="page" class="btn-nav">login</a>
+    <div class="flex gap-3 items-center" *ngIf="authService.currentUserSignal()">
+      <a routerLink="/site/cart" routerLinkActive="active-btn" ariaCurrentWhenActive="page" class="btn-nav">Cart</a>
+      <span class="btn-nav" (click)="authService.logout()">logout</span>
+    </div>
+  </nav>
+
+</div>
+<router-outlet></router-outlet>

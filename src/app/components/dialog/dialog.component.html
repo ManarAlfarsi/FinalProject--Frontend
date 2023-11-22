@@ -1,0 +1,18 @@
+<!-- dialog.component.html -->
+
+<div
+  class="fixed inset-0 z-50 flex items-center justify-center overflow-x-hidden overflow-y-auto outline-none focus:outline-none">
+  <div class="relative w-auto max-w-md mx-auto my-6">
+    <!-- Content -->
+    <div class="relative bg-white p-6 rounded-lg shadow-md">
+      <!-- Title -->
+      <h2 class="text-2xl font-semibold mb-4">{{title}}</h2>
+      <!-- Content -->
+      <p class="text-gray-700 mb-4">{{description}}</p>
+
+      <!-- Close Button -->
+      <button class="text-white bg-gray-600 hover:bg-gray-700 py-2 px-4 rounded" (click)="handleClose()">Close</button>
+    </div>
+  </div>
+</div>
+<div class="fixed inset-0 bg-black opacity-25"></div>
