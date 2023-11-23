@@ -12,7 +12,7 @@ import { HttpClient } from "@angular/common/http";
 import { DialogComponent } from "../../../components/dialog/dialog.component";
 import { ActivatedRoute, Router } from "@angular/router";
 import { switchMap } from "rxjs";
-import { CandleInterface } from "../../../interfaces/candle.interface";
+import { CandleInterface } from "../../../models/candle.model";
 
 @Component({
 	selector: "app-form",

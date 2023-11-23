@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 import { ButtonComponent } from "../../../components/button/button.component";
-import { CandleInterface } from "../../../interfaces/candle.interface";
+import { CandleInterface } from "../../../models/candle.model";
 import { Router, RouterLink } from "@angular/router";
 import { DialogComponent } from "../../../components/dialog/dialog.component";
 

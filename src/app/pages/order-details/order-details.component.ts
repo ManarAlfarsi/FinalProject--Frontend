@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CardComponent } from '../../components/card/card.component';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
-import { OrderInterface } from '../../interfaces/order.interface';
+import { OrderInterface } from '../../models/order.model';
 
 @Component({
   selector: 'app-order-details',

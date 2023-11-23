@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ButtonComponent } from "../../components/button/button.component";
-import { CustomerInterFace } from "../../interfaces/customer.interface";
+import { CustomerInterFace } from "../../models/customer.model";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 
 @Component({

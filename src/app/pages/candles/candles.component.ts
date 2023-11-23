@@ -4,7 +4,7 @@ import { CardComponent } from "../../components/card/card.component";
 import { SearchComponent } from "../../components/search/search.component";
 import { ButtonComponent } from "../../components/button/button.component";
 import { HttpClient } from "@angular/common/http";
-import { CandleInterface } from "../../interfaces/candle.interface";
+import { CandleInterface } from "../../models/candle.model";
 
 interface Candle {
 	id: number;

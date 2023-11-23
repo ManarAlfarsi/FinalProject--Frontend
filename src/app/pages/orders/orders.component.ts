@@ -2,7 +2,7 @@ import { CommonModule } from "@angular/common";
 import { HttpClient } from "@angular/common/http";
 import { Component, inject } from "@angular/core";
 import { ButtonComponent } from "../../components/button/button.component";
-import { OrderInterface } from "../../interfaces/order.interface";
+import { OrderInterface } from "../../models/order.model";
 import { Router } from "@angular/router";
 
 @Component({

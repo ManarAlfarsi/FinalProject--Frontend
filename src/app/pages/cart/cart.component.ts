@@ -2,9 +2,9 @@ import { Component, OnInit, inject } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { ButtonComponent } from "../../components/button/button.component";
 import { CardComponent } from "../../components/card/card.component";
-import { OrderInterface } from "../../interfaces/order.interface";
+import { OrderInterface } from "../../models/order.model";
 import { HttpClient } from "@angular/common/http";
-import { CandleInterface } from "../../interfaces/candle.interface";
+import { CandleInterface } from "../../models/candle.model";
 
 @Component({
 	selector: "app-cart",
