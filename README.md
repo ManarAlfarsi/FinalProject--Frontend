@@ -1,5 +1,3 @@
-# Candle Store
-
 
 
 
@@ -14,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -the user can purchase candles
 
 **Use case**
+
+
 ![usecase CS drawio](https://github.com/ManarAlfarsi/FinalProject--Frontend/assets/146036696/a55ecd28-c11c-4974-b2b6-1e562563d414)
 
 ## Development server
