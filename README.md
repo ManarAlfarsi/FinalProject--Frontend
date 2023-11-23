@@ -8,6 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # description of the project
 -The project is a candle store, there is two can login to the website: admin and user.
+
 -The admin can edit, remove, or add candles. furthermore able to view customers, orders, and their details; 
 
 -the user can purchase candles
